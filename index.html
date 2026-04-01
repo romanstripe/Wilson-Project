@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>알람 UI</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>알람</h1>
+
+      <section
+        id="notification"
+        class="notification"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div class="notification-title">알람 발생</div>
+        <div class="notification-message" id="notifMessage"></div>
+        <div class="notification-time" id="notifTime"></div>
+      </section>
+
+      <section class="current">
+        <div>
+          <span class="label">메시지</span>
+          <span class="value" id="currentMessage">—</span>
+        </div>
+        <div>
+          <span class="label">시간</span>
+          <span class="value" id="currentTimestamp">—</span>
+        </div>
+      </section>
+
+      <button id="triggerBtn" type="button" class="btn">알람 트리거</button>
+
+      <h2>알람 기록</h2>
+      <ul id="history" class="history"></ul>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
